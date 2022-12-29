@@ -1,5 +1,8 @@
 #!/sbin/sh
 
+ln -sf /dev/block/platform/soc/11230000.mmc/by-name /dev/block/platform/soc
+ln -sf /dev/block/platform/soc/11230000.mmc /dev/block/bootdevice
+
 REAL_LK=`readlink -f /dev/block/platform/soc/by-name/lk`
 REAL_PL_HDR0=`readlink -f /dev/block/platform/soc/by-name/boot0hdr0`
 REAL_PL_HDR1=`readlink -f /dev/block/platform/soc/by-name/boot0hdr1`
